@@ -1,0 +1,35 @@
+﻿@using WebApplication2.Models;
+@model List<Employees>
+
+<h2>List of Products</h2>
+
+
+<a href = "/Employee/create"> Create New Product </a>
+
+<table>
+    <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Location</th>
+    <th>job</th>
+    <th>Salary</th>
+    <th></th>
+
+    </tr>
+
+@foreach(Employees item in Model){
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.Name</td>
+        <td>@item.location</td>
+        <td>@item.job</td>
+        <td>@item.salary</td>
+
+        <td><a href = "/Employee/Details/@item.Id">View</a></td>  
+        <td><a href = "/Employee/Edit/@item.Id">Edit</a></td>  
+        <td><a href = "/Employee/Delete/@item.Id">Delete</a></td>
+    </tr>
+}
+
+</table>

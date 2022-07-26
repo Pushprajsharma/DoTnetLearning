@@ -1,0 +1,17 @@
+﻿@model Employees
+
+<form action = "/Employee/Edit" method="post">
+    
+    <label> ID </label>
+    <input type = "Number" name="Id" value="@Model.Id" />
+    <label> Name </label>
+    <input type = "text" name="Name" value="@Model.Name" />
+    <label> Job </label>
+    <input type = "text" name="job"  value="@Model.job"/>
+    <label>Salary</label>
+    <input type = "Number" name="salary" value="@Model.salary" />
+    <input type = "text" name="location" value="@Model.location" />
+
+    <input type = "submit" value="Done" />
+</form>
+
